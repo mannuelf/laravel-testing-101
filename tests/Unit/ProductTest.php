@@ -4,16 +4,24 @@ use App\Product;
 
 class ProductTest extends PHPUnit_Framework_TestCase
 {
-    function testAProductHasName()
-    {
-        // create a new instance of product.
-        $product = new Product('Fallout 4', 100);
-        $this->assertEquals('Fallout 4', $product->name());
+
+    protected $product;
+
+    // setup method to DRY up tests
+    public function setUp() {
+      $this->product = new Product('Fallout 4', 100);
     }
 
-    function testProductHasPrice()
+    /** @test **/
+    function a_product_has_name()
     {
-      $product = new Product('price', 100);
-      $this->assertEquals(100, $product->price());
+        // create a new instance of product.
+        $this->assertEquals('Fallout 4', $this->product->name());
+    }
+
+    /** @test **/
+    function a_product_has_price()
+    {
+      $this->assertEquals(100, $this->product->price());
     }
 }
