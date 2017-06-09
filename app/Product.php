@@ -6,9 +6,10 @@ class Product
 
     protected $price;
 
-    public function __construct($name)
+    public function __construct($name, $price)
     {
         $this->name = $name;
+        $this->price = $price;
     }
 
     public function name()
@@ -18,7 +19,7 @@ class Product
 
     public function price()
     {
-      $price = 'R100';
+      $price = 100;
       return $price;
     }
 }
