@@ -25,7 +25,7 @@ class ProductTest extends TestCase
     }
 
     /** @test **/
-    public function testProductHasPrice()
+    public function a_product_has_a_cost()
     {
         $this->assertEquals(59, $this->product->cost());
     }
