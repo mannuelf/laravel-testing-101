@@ -17,7 +17,9 @@ class WelcomePageTest extends DuskTestCase
     {
         $this->browse(function (Browser $browser) {
             $browser->visit('/')
-                ->assertSee('Laravel 5.2');
+                ->assertSee('Laravel 5.5')
+                ->click('.btn-click-me')
+                ->visit('feedback');
         });
     }
 }
