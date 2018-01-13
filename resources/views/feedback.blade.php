@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Feedback
+                    You have been clicked punk
                 </div>
                 <div class="links">
                 </div>
