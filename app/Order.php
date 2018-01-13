@@ -4,7 +4,7 @@ namespace App;
 
 class Order
 {
-    
+
     protected $products = [];
 
     public function add(Product $product)
@@ -15,5 +15,18 @@ class Order
     public function products()
     {
         return $this->products;
+    }
+
+    public function total()
+    {
+        // implementation
+        $total = 0;
+
+        // filter through all the products call a cost method on each on and store the result.
+        foreach ($this->products as $product) {
+            $total += $product->cost();
+        }
+
+        return $total;
     }
 }
